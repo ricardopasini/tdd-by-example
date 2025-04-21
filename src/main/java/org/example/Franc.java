@@ -2,7 +2,7 @@ package org.example;
 
 public class Franc {
 
-    int amount;
+    private int amount;
 
     public Franc(int amount) {
         this.amount = amount;
