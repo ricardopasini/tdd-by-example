@@ -1,8 +1,6 @@
 package org.example;
 
-public class Franc {
-
-    private int amount;
+public class Franc extends Money {
 
     public Franc(int amount) {
         this.amount = amount;
@@ -12,8 +10,4 @@ public class Franc {
         return new Franc(amount * multiplier);
     }
 
-    public boolean equals(Object obj) {
-        Franc franc = (Franc) obj;
-        return amount == franc.amount;
-    }
 }
