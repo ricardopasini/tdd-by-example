@@ -3,7 +3,12 @@ package org.example;
 public abstract class Money {
 
     protected int amount;
-    protected abstract String currency();
+    protected String currency;
+
+    public Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
 
     public abstract Money times(int multiplier);
 
