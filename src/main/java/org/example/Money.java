@@ -18,10 +18,6 @@ public class Money implements Expression {
         return new Money(amount, "CHF");
     }
 
-    public Money times(int multiplier){
-        return new Money(amount * multiplier, this.currency);
-    }
-
     public boolean equals(Object obj) {
         Money money = (Money) obj;
         return amount == money.amount
@@ -42,7 +38,11 @@ public class Money implements Expression {
                 '}';
     }
 
-    public Expression plus(Money addend) {
-        return new Sum(this, addend);
+    public Expression times(int multiplier){
+        return new Money(amount * multiplier, this.currency);
+    }
+
+    public Expression plus(Expression addmend) {
+        return new Sum(this, addmend);
     }
 }
